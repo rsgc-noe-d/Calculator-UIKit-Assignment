@@ -153,6 +153,9 @@
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKt-Zt-p1u"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk9-s0-Reu">
                                                 <rect key="frame" x="94" y="0.0" width="93" height="107"/>
@@ -224,6 +227,9 @@
                             <constraint firstItem="SEr-bc-Xio" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wM8-L7-RCi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelDisplay" destination="NdW-6w-wNc" id="uSf-f8-Tfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Connection to label in view
+    @IBOutlet weak var labelDisplay: UILabel!
+    
+    //Create an instance of the Calculator class
+    var model = Calculator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onePressed(_ sender: Any) {
+        model.addToNewValue(digit: "1")
+        labelDisplay.text = model.providedValue
+    }
 
 }
 
