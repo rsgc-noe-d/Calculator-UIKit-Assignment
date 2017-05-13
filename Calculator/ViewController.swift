@@ -76,7 +76,6 @@ class ViewController: UIViewController {
     
     @IBAction func multiply(_ sender: Any) {
         model.multiply()
-        
     }
     
     @IBAction func divide(_ sender: Any) {
@@ -90,6 +89,10 @@ class ViewController: UIViewController {
     
     @IBAction func Subtract(_ sender: Any) {
     model.subtraction()
+    }
+    
+    @IBAction func Add(_ sender: Any) {
+    model.addition()
     }
     
     @IBAction func Clear(_ sender: Any) {

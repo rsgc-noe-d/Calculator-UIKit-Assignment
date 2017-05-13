@@ -30,7 +30,14 @@ class Calculator {
         
         updateState()
     }
-    
+    // Sets calculator operation to addition, and computes a new value, if needed.
+    func addition(){
+        
+        //Set operation
+        operation = Operation.addition
+        
+        updateState()
+    }
     /**
      Sets calculator operation to multiplication, and computes a new value, if needed.
      */
@@ -98,12 +105,15 @@ class Calculator {
     func equals() {
         
         // Check operation type
+        if computedValue != nil{
         if operation == Operation.multiplication {
             computedValue = computedValue! * Double(providedValue)!
         } else if operation == Operation.division {
             computedValue = computedValue! / Double(providedValue)!
         }else if operation == Operation.subtraction {
             computedValue = computedValue! - Double(providedValue)!
+        }else if operation == Operation.addition {
+            computedValue = computedValue! + Double(providedValue)!
         }
         
         // The operation selected has been performed, so get ready to receive new operation
@@ -112,6 +122,7 @@ class Calculator {
         providedValue = ""
         
     }
+}
     
     /**
      Makes the computed value become whatever value the user has typed into the calculator.
