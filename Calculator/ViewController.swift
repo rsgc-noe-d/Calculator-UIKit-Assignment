@@ -91,8 +91,13 @@ class ViewController: UIViewController {
         model.percentage()
     }
     
-    @IBAction func PlusMinus(_ sender: Any) {
+    @IBAction func Decimal(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        labelDisplay.text = model.providedValue
+    }
     
+    @IBAction func PlusMinus(_ sender: Any) {
+        model.plusMinus()
     }
     
     @IBAction func Subtract(_ sender: Any) {
