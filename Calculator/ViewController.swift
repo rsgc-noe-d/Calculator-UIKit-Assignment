@@ -74,6 +74,11 @@ class ViewController: UIViewController {
         labelDisplay.text = model.providedValue
     }
     
+    @IBAction func zeroPressed(_ sender: Any) {
+        model.addToNewValue(digit: "0")
+        labelDisplay.text = model.providedValue
+    }
+    
     @IBAction func multiply(_ sender: Any) {
         model.multiply()
     }
@@ -82,6 +87,9 @@ class ViewController: UIViewController {
         model.divide()
     }
     
+    @IBAction func Percent(_ sender: Any) {
+        model.percentage()
+    }
     
     @IBAction func PlusMinus(_ sender: Any) {
     
