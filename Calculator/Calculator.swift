@@ -38,14 +38,6 @@ class Calculator {
         
         updateState()
     }
-    // Sets calculator operation to plusMinus, and computes a new value, if needed.
-    func plusMinus(){
-        
-        //Set operation
-        operation = Operation.plusMinus
-        
-        updateState()
-    }
     
     // Sets calculator operation to percentage, and computes a new value, if needed.
     func percentage(){
@@ -133,9 +125,7 @@ class Calculator {
             computedValue = computedValue! + Double(providedValue)!
         }else if operation == Operation.percentage {
             computedValue = computedValue! / 100
-        }else if operation == Operation.plusMinus {if computedValue != nil && providedValue != "" {providedValue = String(format: "%g" , providedValue, "*", "-1")}
-            computedValue = computedValue! * -1
-            }
+        }
         
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
