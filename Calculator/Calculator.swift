@@ -22,6 +22,15 @@ class Calculator {
         providedValue = providedValue + digit
     }
     
+// Sets calculator operation to subtraction, and computes a new value, if needed.
+    func subtraction(){
+        
+        //Set operation
+        operation = Operation.subtraction
+        
+        updateState()
+    }
+    
     /**
      Sets calculator operation to multiplication, and computes a new value, if needed.
      */
@@ -93,6 +102,8 @@ class Calculator {
             computedValue = computedValue! * Double(providedValue)!
         } else if operation == Operation.division {
             computedValue = computedValue! / Double(providedValue)!
+        }else if operation == Operation.subtraction {
+            computedValue = computedValue! - Double(providedValue)!
         }
         
         // The operation selected has been performed, so get ready to receive new operation
