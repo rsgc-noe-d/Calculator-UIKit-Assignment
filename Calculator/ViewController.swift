@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //when a button is pressed it is added to the model and updates the view
     @IBAction func onePressed(_ sender: Any) {
         model.addToNewValue(digit: "1")
         labelDisplay.text = model.providedValue
@@ -109,6 +110,7 @@ class ViewController: UIViewController {
     model.addition()
     }
     
+    //if a computed value, provided value, and/or an operation is detected it will clear it.
     @IBAction func Clear(_ sender: Any) {
         if model.computedValue != nil{
             model.computedValue = nil
